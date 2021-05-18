@@ -1,0 +1,58 @@
+<%- include ('./partials/header') %>
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	</head>
+
+	<body>
+		<section class="log">
+			<div class="container my-4">
+				<h1 class="text-center">Login to our website</h1>
+				<form action="/login" method="POST">
+					<div class="form-group">
+						<label for="username">Username</label>
+						<input type="text" class="form-control" id="username" name="username"
+							aria-describedby="emailHelp">
+
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-control" id="password" name="password">
+						<small id="emailHelp" class="form-text text-muted">Dont Have An Account? <a
+								href="/register">Signup</a></small>
+					</div>
+					<button type="submit" class="btn btn-primary">Login</button>
+				</form>
+			</div>
+		</section>
+	</body>
+
+	</html>
+	<%- include ('./partials/footer') %>
+
+
+
+
+
+
+
+		<style>
+			.body {
+				width: 100%;
+				height: 100vh;
+			}
+
+			.container {
+				padding-top: 150px;
+				color: white;
+			}
+
+			.log {
+				background-color: #025492;
+				width: 100%;
+				height: 100vh;
+				margin-top: -20px;
+			}
+		</style>

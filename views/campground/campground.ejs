@@ -1,0 +1,44 @@
+<%- include ('../partials/header') %>
+<section class="camp">
+<div class="container">
+	<header class="jumbotron">
+		<div class="container">
+			<h1>Welcome to AlienPad</h1>
+			<p>view our hand-picked books from all over the world which are written by our communtiy</p>
+			<p><a class="btn btn-primary btn-large" href="/campgrounds/new">Add short stories</a></p>
+		</div>
+	</header>
+
+
+	<div class="row" style="display:flex; flex-wrap: wrap;">
+		<% campground.forEach(function(campgrounds){ %> 
+			<div class="col-md-3 col-sm-6">
+				<div class="thumbnail">
+					<img src="<%= campgrounds.image %>">
+					<div class="caption">
+						<h4><%=campgrounds.name %></h4>
+					</div>
+					<p>
+						<a href="/campgrounds/<%=campgrounds._id%>" class="btn btn-primary">more info</a>
+					</p>
+				</div>
+			</div>
+		<% }); %>
+	</div>
+</div>
+</section>
+<%- include ('../partials/footer') %>
+
+
+<style>
+.thumbnail img {
+    width: 300px;
+    height: 250px;
+}
+
+.camp{
+	background-color: #CFE9EF;
+	margin-top: -20px;
+	padding-top: 30px;
+}
+</style>

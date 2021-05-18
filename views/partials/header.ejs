@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AlienPad</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="container-fluid">
+			<div class="navbar-header"> <a href="/"><img src="https://img.icons8.com/material-outlined/80/000000/black-jaguar.png"/></a> </div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<% if(!currentuser){ %>
+						<button type="button" class="btn btn-warning"><li><a href="/login">login</a></button>
+						<li>
+							<button type="button" class="btn btn-warning"><li><a href="/register">sign up</a></button>
+						<li>
+							<% } else { %>
+								<button type="button" class="btn btn-warning"><li><a href="/">Home</a></button>
+								<button type="button" class="btn btn-warning"><li><a href="/logout">logout</a></button>
+						<li>
+							<% } %>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	</div>
+
+
+
+
+
+<style>
+
+.container-fluid {
+width: 100%;
+background-color: #F8CF40;
+}
+
+.container-fluid .btn-warning {
+    color: #fff;
+    background-color: black;
+	margin-top:20px;
+	margin-left:20px;
+}
+
+.container-fluid .btn-warning li a {
+    color: #fff;
+}
+</style>
